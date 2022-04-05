@@ -9,6 +9,7 @@
 body {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
 }
 
 .board {
@@ -24,5 +25,32 @@ body {
     width: var(--cell-size);
    height: var(--cell-size);
    border: 1px solid black;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 4em;
 }
 
+.cell:first-child,
+.cell:nth-child(2),
+.cell:nth-child(3) {
+    border-top: 0;
+}
+
+.cell:last-child,
+.cell:nth-child(7),
+.cell:nth-child(8) {
+    border-bottom: 0;
+}
+
+.cell:first-child,
+.cell:nth-child(4),
+.cell:nth-child(7) {
+    border-left: none;
+}
+
+.cell:nth-child(3),
+.cell:nth-child(6),
+.cell:last-child {
+    border-right: none;
+}
