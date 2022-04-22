@@ -10,6 +10,40 @@ body {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1em;
+    position: relative;
+}
+
+.start-screen p {
+    font-size: 3em;
+    margin-top: 0;
+}
+
+.start-screen input {
+    width: 100%;
+    padding: 1em;
+    margin: .8em 0;
+    font-size: 1.2em;
+}
+
+.start-screen input::placeholder {
+    color: rgb(71, 71, 71);
+    font-size: 1em;
+}
+
+.start-screen input:focus {
+    outline: none;
+    border: 1px solid grey;
+}
+
+.title-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player2-select {
+    margin-top: 1.3em;
 }
 
 .board {
@@ -29,6 +63,7 @@ body {
    justify-content: center;
    align-items: center;
    font-size: 4em;
+   cursor: pointer;
 }
 
 .cell:first-child,
@@ -53,4 +88,70 @@ body {
 .cell:nth-child(6),
 .cell:last-child {
     border-right: none;
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .6);
+    display: flex;
+}
+
+.overlay,
+.message-board,
+.start-screen {
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.message-board,
+.start-screen {
+    background-color: black;
+    width: 40%;
+    padding: 2em;
+    color: white;
+    font-weight: bold;
+    display: flex;
+}
+
+.winning-message {
+    margin: 0;
+    margin-bottom: .5em;
+    font-size: 2em;
+}
+
+.message-board button,
+.start-screen button {
+    padding: 1em 1.5em;
+    border-radius: 0;
+    border: white;
+    color: black;
+    font-weight: bold;
+}
+
+.overlay button {
+    width: 100%;
+    margin-top: 3em;
+    padding: 1.3em 0;
+    font-size: 1em;
+}
+
+.message-board button:hover,
+.start-screen button:hover {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+}
+
+div.visible {
+    display: flex;
 }
